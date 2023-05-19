@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from 'https://github.com/SohamSinghal/MyPortfolio/tree/master/node_modules/%40supabase/supabase-js'
 // Create a single supabase client for interacting with your database
 const supabase = createClient('https://zcdxtvqumrhlbnzlohzv.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpjZHh0dnF1bXJobGJuemxvaHp2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ0MDU1OTcsImV4cCI6MTk5OTk4MTU5N30.iCmc-OwXj_g9A60y3YzYpKvUXdrnOGHptmAAgnWt--I');
 //Projects

@@ -1,5 +1,5 @@
-import * as THREE from 'three';
-import '/style.css';
+import * as THREE from 'https://github.com/SohamSinghal/MyPortfolio/tree/master/node_modules/three';
+import 'https://github.com/SohamSinghal/MyPortfolio/blob/master/style.css';
 
 //Scene
 const scene = new THREE.Scene();
@@ -33,12 +33,12 @@ function addCube()
     let cubeGeometry = new THREE.BoxGeometry(0.5,0.5,0.5);
     let loader = new THREE.TextureLoader();
     let materialArray = [
-    new THREE.MeshStandardMaterial( { map: loader.load("asset/soham.png") } ),
-    new THREE.MeshStandardMaterial( { map: loader.load("asset/soham.png") } ),
-    new THREE.MeshStandardMaterial( { map: loader.load("asset/soham.png") } ),
-    new THREE.MeshStandardMaterial( { map: loader.load("asset/soham.png") } ),
-    new THREE.MeshStandardMaterial( { map: loader.load("asset/soham.png") } ),
-    new THREE.MeshStandardMaterial( { map: loader.load("asset/soham.png") } ),
+    new THREE.MeshStandardMaterial( { map: loader.load("https://github.com/SohamSinghal/MyPortfolio/blob/master/asset/soham.png") } ),
+    new THREE.MeshStandardMaterial( { map: loader.load("https://github.com/SohamSinghal/MyPortfolio/blob/master/asset/soham.png") } ),
+    new THREE.MeshStandardMaterial( { map: loader.load("https://github.com/SohamSinghal/MyPortfolio/blob/master/asset/soham.png") } ),
+    new THREE.MeshStandardMaterial( { map: loader.load("https://github.com/SohamSinghal/MyPortfolio/blob/master/asset/soham.png") } ),
+    new THREE.MeshStandardMaterial( { map: loader.load("https://github.com/SohamSinghal/MyPortfolio/blob/master/asset/soham.png") } ),
+    new THREE.MeshStandardMaterial( { map: loader.load("https://github.com/SohamSinghal/MyPortfolio/blob/master/asset/soham.png") } ),
 ];
     cube = new THREE.Mesh( cubeGeometry, materialArray );
     cube.position.set(0.75,0,camera.position.z + 6);
@@ -53,7 +53,7 @@ for(let i = 0;i<10000;i++)
     accelerations.push(0.00001);
 }
 starGeo.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-const sprite = new THREE.TextureLoader().load('asset/star.png');
+const sprite = new THREE.TextureLoader().load('https://github.com/SohamSinghal/MyPortfolio/blob/master/asset/star.png');
 const starMaterial = new THREE.PointsMaterial({color:0xffffff,size:0.4,map:sprite});
 stars = new THREE.Points(starGeo,starMaterial);
 scene.add(stars);
@@ -86,8 +86,8 @@ function starAnimations()
 function addMoon()
 {
     const moonGeometry = new THREE.SphereGeometry(5, 32, 32); 
-    const moonTexture = new THREE.TextureLoader().load('asset/plutomap2k.jpg'); 
-    const normalTexture = new THREE.TextureLoader().load('asset/plutobump2k.jpg'); 
+    const moonTexture = new THREE.TextureLoader().load('https://github.com/SohamSinghal/MyPortfolio/blob/master/asset/plutomap2k.jpg'); 
+    const normalTexture = new THREE.TextureLoader().load('https://github.com/SohamSinghal/MyPortfolio/blob/master/asset/plutobump2k.jpg'); 
     const moonMaterial = new THREE.MeshStandardMaterial({map:moonTexture,normalMap:normalTexture});
     moon.geometry = moonGeometry;
     moon.material = moonMaterial;
@@ -106,7 +106,7 @@ function createMoonOrbit(){
 //Add Jupiter
 function addJupiter(){
     const jupiterGeometry = new THREE.SphereGeometry(25, 320, 320); 
-    const jupiterTexture = new THREE.TextureLoader().load('asset/jupitermap.jpg'); 
+    const jupiterTexture = new THREE.TextureLoader().load('https://github.com/SohamSinghal/MyPortfolio/blob/master/asset/jupitermap.jpg'); 
     const jupiterMaterial = new THREE.MeshStandardMaterial({map:jupiterTexture});
     jupiter.geometry = jupiterGeometry;
     jupiter.material = jupiterMaterial;
