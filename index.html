@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel = "stylesheet" href="style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <canvas id="bg"></canvas>
+    <main>
+
+        <header>
+          <h1>Soham Singhal</h1>
+          <p>🚀 Welcome to my website!</p>
+        </header>
+  
+        <blockquote>
+          <p>i like making stuff and putting it on the internet</p>
+        </blockquote>
+  
+        <section id = "AboutMe">
+          <h2>📜 About Me</h2>
+          <p>
+            Hi there!<br> I'm Soham Singhal, a passionate student currently pursuing my undergrad in Artificial Intelligence. Welcome to my portfolio! Allow me to share a glimpse into my world of curiosity.
+          </p>
+
+          <p>
+            I am an optimistic individual, always embracing challenges as opportunity to broaden my knowledge. AI is a ever-evolving field and I am driven to constantly expand my understanding of it.
+          </p>
+  
+          <p>
+            My pragmatic approach to problems enables me to apporach them in a unique sense. This, combined with my technical skills, brings fresher perspective to the table.
+          </p>
+  
+        </section>
+  
+        <section class="dark">
+          <h2>👩🏽‍🚀 Projects</h2>  
+          <h4 id = "project_name"></h4>
+          <p id = "project_details"></p>
+          <a target=”_blank” id = "project_link">Github Link</a>
+          <div style="display: flex;justify-content: center;">
+          <button type="button"><i id = "left_button" style = "color:white;padding: 0.5px;" class="bi bi-arrow-left"></i></button>
+          <button type="button"><i id = "right_button" style = "color:white;padding: 0.5px;" class="bi bi-arrow-right"></i></button>  
+        </div>
+
+          <h2>📜 Certification</h2>
+          <ul id = "certi">
+
+          </ul>
+  
+        </section>
+  
+        <section class="left">
+          <h2>🌮 Work History</h2> 
+          <div id = "workHist">
+          </div>
+        </section>
+  
+        <blockquote>
+          <p>Thanks for watching!</p><br>
+          <p>
+          <a href="https://github.com/SohamSinghal" target=”_blank”><i style = "color:#25214f;" class="bi bi-github"></i></a>
+          <a href = "mailto: sohamsinghal32@gmail.com"><i style = "color:#25214f;" class="bi bi-envelope-fill"></i></a>
+          <a href="https://www.linkedin.com/in/soham-singhal-8a8b9a214/" target=”_blank”><i style = "color:#25214f;" class="bi bi-linkedin"></i></a>
+        </blockquote>
+      </main>
+    <script type = "module" src="/Scripts/portfolio_info.js"></script>
+    <script type="module" src="main.js" defer></script>
+</body>
+</html>

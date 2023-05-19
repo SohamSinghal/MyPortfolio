@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@supabase/supabase-js": "^2.22.0",
+    "three": "^0.152.2",
+    "threejs-object-controls": "^1.2.8",
+    "vite": "^4.3.5"
+  }
+}

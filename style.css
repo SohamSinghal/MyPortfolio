@@ -1,0 +1,109 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+canvas{
+  background-color: #130f40;
+  background-image: radial-gradient( #130f40 0%, #000000 74%);
+}
+@font-face {
+  font-family: StarWars;
+  src: url('fonts/Star Wars.ttf');
+}
+:root {
+  --dark-bg: rgba(0, 0, 0, 0.2);
+  --spacing: 80px;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: white;
+  font-style: normal;
+}
+
+
+main {
+  width: 100vw;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 80px 0px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1, h2, h3,blockquote {
+  font-family: StarWars;
+  font-weight: 65;
+}
+header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 9;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-bottom: var(--spacing);
+  }
+
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    text-align: justify;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.25;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / 9;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote p {
+    background-color: var(--dark-bg);
+    font-size: 30px;
+    display: inline;
+    line-height: 1;
+  }
+
+  .left {
+    grid-column: 6 / 12;
+  }
+
+  button {     
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;        
+}
+
+a:not(blockquote a)::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+a:not(blockquote a):hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a:not(blockquote a)::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200, 57%, 25%);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+a:not(blockquote a){
+  position: relative;
+  color: white;
+}
