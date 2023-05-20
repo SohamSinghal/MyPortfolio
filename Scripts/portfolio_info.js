@@ -1,9 +1,10 @@
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+import 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js'
+const { createClient } = supabase
 // Create a single supabase client for interacting with your database
-const supabase = createClient('https://zcdxtvqumrhlbnzlohzv.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpjZHh0dnF1bXJobGJuemxvaHp2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ0MDU1OTcsImV4cCI6MTk5OTk4MTU5N30.iCmc-OwXj_g9A60y3YzYpKvUXdrnOGHptmAAgnWt--I');
+const _supabase = createClient('https://zcdxtvqumrhlbnzlohzv.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpjZHh0dnF1bXJobGJuemxvaHp2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ0MDU1OTcsImV4cCI6MTk5OTk4MTU5N30.iCmc-OwXj_g9A60y3YzYpKvUXdrnOGHptmAAgnWt--I');
 //Projects
 var a = 0;
-const { data:projects, error:p } = await supabase.from("projects").select('*');
+const { data:projects, error:p } = await _supabase.from("projects").select('*');
 function displayProjectInfo(index){
 document.getElementById('project_name').innerHTML = {data:projects}["data"][index]["Name"];
 document.getElementById('project_details').innerHTML = {data:projects}["data"][index]["Description"];
@@ -27,7 +28,7 @@ document.getElementById('right_button').onclick = function() {
     displayProjectInfo(a);
 }
 //Certificates
-const { data:accomplishments, error:acc } = await supabase.from("accomplishments").select('*');
+const { data:accomplishments, error:acc } = await _supabase.from("accomplishments").select('*');
 var inhtml = '';
 for(var i = 0;i< {data:accomplishments}["data"].length;i++)
 {
@@ -35,7 +36,7 @@ for(var i = 0;i< {data:accomplishments}["data"].length;i++)
 }
 document.getElementById("certi").innerHTML = inhtml;
 //Work History
-const { data:workHist, error:wh } = await supabase.from("workHist").select('*');
+const { data:workHist, error:wh } = await _supabase.from("workHist").select('*');
 var inhtml = '';
 for(var i = 0;i< {data:workHist}["data"].length;i++)
 {
