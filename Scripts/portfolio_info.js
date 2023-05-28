@@ -9,18 +9,19 @@ function displayProjectInfo(index){
 document.getElementById('project_name').innerHTML = {data:projects}["data"][index]["Name"];
 document.getElementById('project_details').innerHTML = {data:projects}["data"][index]["Description"];
 document.getElementById('project_link').href = {data:projects}["data"][index]["Link"];
+document.getElementById('page_number').innerHTML = (index+1).toString() + '/' +({data:projects}["data"].length).toString();
 }
 displayProjectInfo(a);
 document.getElementById('left_button').onclick = function() {
     if(a == 0){
-        a = {data:projects}.length -1 ;
+        a = {data:projects}["data"].length -1 ;
     }
     else{
     a -= 1;}
     displayProjectInfo(a);
 }
 document.getElementById('right_button').onclick = function() {
-    if(a == {data:projects}.length-1){
+    if(a == {data:projects}["data"].length-1){
         a = 0 ;
     }
     else{
@@ -42,5 +43,4 @@ for(var i = 0;i< {data:workHist}["data"].length;i++)
 {
     inhtml += '<h3>'+{data:workHist}["data"][i]["position name"]+'</h3><h4>'+{data:workHist}["data"][i]["company name"]+'</h4><h4>'+{data:workHist}["data"][i]["date"]+'</h4><p>' + {data:workHist}["data"][i]["description"]+'</p><a href = \"'+{data:workHist}["data"][i]["certification"]+'\">Certificate Link</a>'
 }
-console.log({data:workHist});
 document.getElementById("workHist").innerHTML = inhtml;
