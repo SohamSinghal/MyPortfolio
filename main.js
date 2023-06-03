@@ -1,4 +1,4 @@
-import * as THREE from 'https://cdn.skypack.dev/three';
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.153.0/three.min.js';
 
 //Scene
 const scene = new THREE.Scene();
